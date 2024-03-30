@@ -33,13 +33,13 @@ public class Humain {
 		System.out.print("buvez!!");
 		
 	}
-	public void ami(Humain ami) {
+	public void ami(Humain ami, int dureeAmitie) {
         if (!this.amis.contains(ami)) {
-            this.amis.add(ami);
-            ami.ami(this); 
-            System.out.print(this.prenom + " est desormais ami avec " + ami.prenom + ".");
+            this.amis.add(new Ami(ami, dureeAmitie));
+            ami.ami(this, dureeAmitie);s
+            System.out.println(this.prenom + " est desormais ami avec " + ami.prenom + " depuis " + dureeAmitie + " jours.");
         } else {
-            System.out.print(this.prenom + " est déjà ami avec " + ami.prenom + ".");
+            System.out.println(this.prenom + " est déjà ami avec " + ami.prenom + ".");
         }
     }
 	
