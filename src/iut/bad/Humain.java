@@ -1,15 +1,21 @@
 package iut.bad;
 
+
+import java.util.List;
+
 public class Humain {
 	private String nom; 
 	private String prenom; 
 	private int age;
+	
+	private List<Humain> amis;
 	
 	public Humain(String nom, String prenom, int age) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
+		this.amis = new ArrayList<>();
 	} 
 	
 	public void details() {
@@ -20,12 +26,30 @@ public class Humain {
 	}
 
 	public void manger() {
-		System.out.print(mangez!!!);
+		System.out.print("mangez!!");
 		
 	}
 	public void boire() {
-		System.out.print(buvez!!!);
+		System.out.print("buvez!!");
 		
 	}
-
+	public void ami(Humain ami) {
+        if (!this.amis.contains(ami)) {
+            this.amis.add(ami);
+            ami.ami(this); 
+            System.out.print(this.prenom + " est maintenant ami avec " + ami.prenom + ".");
+        } else {
+            System.out.print(this.prenom + " est déjà ami avec " + ami.prenom + ".");
+        }
+    }
+	
+	public List<Humain> getAmis() {
+        return amis;
+    }
+    
+    public void setAmis(List<Humain> amis) {
+        this.amis = amis;
+    }
 }
+
+
