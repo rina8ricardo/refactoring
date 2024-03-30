@@ -20,6 +20,11 @@ public class Humain {
 	}
 
 	public void manger() {
+		System.out.print(mangez!!!);
+		
+	}
+	public void boire() {
+		System.out.print(buvez!!!);
 		
 	}
 
