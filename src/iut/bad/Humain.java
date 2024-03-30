@@ -1,6 +1,6 @@
 package iut.bad;
 
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class Humain {
@@ -15,7 +15,7 @@ public class Humain {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
-		this.amis = new ArrayList<>();
+		this.amis = new = ArrayList<>();
 	} 
 	
 	public void details() {
@@ -37,7 +37,7 @@ public class Humain {
         if (!this.amis.contains(ami)) {
             this.amis.add(ami);
             ami.ami(this); 
-            System.out.print(this.prenom + " est maintenant ami avec " + ami.prenom + ".");
+            System.out.print(this.prenom + " est desormais ami avec " + ami.prenom + ".");
         } else {
             System.out.print(this.prenom + " est déjà ami avec " + ami.prenom + ".");
         }
