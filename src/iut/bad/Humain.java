@@ -19,5 +19,8 @@ public class Humain {
 		return nom + " " + prenom + " " + age;
 	}
 
+	public void manger() {
+		
+	}
 
 }
